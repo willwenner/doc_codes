@@ -1,1 +1,1 @@
-# Cálculo do perfil de emissividade em função da temperatura para o Carbono
+# Emissivity profile for Carbon calculation
