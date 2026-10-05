@@ -3,6 +3,17 @@
 Os coeficientes de emissividade de fótons (PEC) são utilizados para o cálculo da emissividade de uma transição atômica, eles são obtidos através da biblioteca 
 [Open-ADAS](https://open.adas.ac.uk/) que armazena dados atômicos obtidos por modelos atômicos colisional-radioativos. 
 
+## Versão 0.1:
+
+- Leitura do arquivo tipo ADF15 que contÊm os valores de PEC para as transições do CARBONO.
+- O programa lê e retorna dois dicionários: excit, recom. Os dicionários são escritos da seguinte forma:
+        - Temperatura Eletrônica (eV)
+        - Densidade Eletrônica ($cm^(-3)$)
+        - PEC: Matrix N_densidades x N_temperaturas (24x21)
+    
+### BUGS:
+- Problemas de valores repetidos (???) 
+- Não lê a pec para CRX
 
 ### Arquivos utilizados:
 
