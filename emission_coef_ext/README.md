@@ -9,9 +9,9 @@ Os coeficientes de emissividade de fótons (PEC) são utilizados para o cálculo
 - O programa lê e retorna dois dicionários: excit, recom. Os dicionários são escritos da seguinte forma:
 
     - Temperatura Eletrônica (eV)
-    - Densidade Eletrônica (cm^(-3))
+    - Densidade Eletrônica ($cm^(-3)$)
     - PEC: Matrix N_densidades x N_temperaturas (24x21)
-    
+
     
 ### BUGS:
 - Problemas de valores repetidos (???) 
