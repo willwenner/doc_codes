@@ -12,6 +12,11 @@ Os coeficientes de emissividade de fótons (PEC) são utilizados para o cálculo
     - Densidade Eletrônica ($cm^(-3)$)
     - PEC: Matrix N_densidades x N_temperaturas (24x21)
 
+## Versão 0.2: 
+
+- Plot dos gráficos em unidades do S.I.
+- Correção de bugs na unidade, agora a emissividade retorna os valores corretos.
+
     
 ### BUGS:
 - Problemas de valores repetidos (???) 
