@@ -172,6 +172,7 @@ def get_pec(excit, recom,  wavelength, ne, te, kind = None, n0 = None, permit_ex
 
 def get_emissivity(ne, te, n_c5_eff, n_c6_eff, n0=None, energy = None, Zeff = None, B0 = None, ti = None):
     
+    adas = OpenADAS(permit_extrapolation = True)
     pec_excit_adas = adas.impact_excitation_pec(carbon, 5, (8, 7)) # Wm^3
     pec_recomb_adas = adas.recombination_pec(carbon, 5, (8, 7)) # Wm^3
     
