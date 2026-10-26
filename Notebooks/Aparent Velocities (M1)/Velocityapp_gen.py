@@ -1,3 +1,6 @@
+import numpy as np
+
+
 def Vphi_model(x_i, a, DeltaV, gama):
     """Calcula o modelo de sino da velocidade toroidal eliminando os valores imaginários e divisões por zero
 
