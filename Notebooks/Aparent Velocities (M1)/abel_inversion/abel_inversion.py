@@ -1,3 +1,5 @@
+import numpy as np
+
 def onion_peeling_method(n_cordas, y_i):
     """
     Função implementa o método de Pearse, descrito por Dasch (1992), num conjunto de cordas y_i.
