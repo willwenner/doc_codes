@@ -1,30 +1,26 @@
-def onion_peeling_method(n_cordas, r_max):
+def onion_peeling_method(n_cordas, y_i):
     """
     Função implementa o método de Pearse, descrito por Dasch (1992), num conjunto de cordas y_i.
 
     Parâmetros:
     n_cordas (int): número de cordas a ser utilizado no experimento
-    r_max (int, float): valor do raio máximo a ser utilizado 
+    y_i (arr): malha criada com o número de cordas.
 
     Retorna:
     W_ij (arr): Matriz de pesos para o caso direto
     D_ij (arr): Matriz de deconvolução para a inversão através da inversão de W_ij
     """
     # Criação da malha 
-    dr = r_max/n_cordas # passo
-    y_i = np.zeros(n_cordas)
-    # Define os valores de cada anel y_i
-    for i in range(0,n_cordas):
-        y_i[i] = i*dr
-
+    dr = y_i[1]-y_i[0]
+    
     # Criação dos anéis utilizando o passo
     r_externo = y_i[:]+dr/2
     r_interno = y_i[:]-dr/2
-
+    
     # Tratamento dos valores de borda
     r_externo[-1] = n_cordas*dr
     r_interno[0] = 0
-
+    
     # Criando a matriz W_ij
     W_ij = np.zeros((n_cordas,n_cordas))
     
@@ -37,4 +33,4 @@ def onion_peeling_method(n_cordas, r_max):
                 W_ij[i,j] = 0
     
     D_ij = np.linalg.inv(W_ij)
-    return W_ij, D_ij, dr
+    return W_ij, D_ij
