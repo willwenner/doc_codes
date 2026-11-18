@@ -1,6 +1,6 @@
 import numpy as np
 
-def onion_peeling_method(n_cordas, y_i):
+def onion_peeling_method(y_i):
     """
     Função implementa o método de Pearse, descrito por Dasch (1992), num conjunto de cordas y_i.
 
@@ -12,6 +12,8 @@ def onion_peeling_method(n_cordas, y_i):
     W_ij (arr): Matriz de pesos para o caso direto
     D_ij (arr): Matriz de deconvolução para a inversão através da inversão de W_ij
     """
+    n_cordas = len(y_i)
+    
     # Criação da malha 
     dr = y_i[1]-y_i[0]
     
@@ -20,7 +22,7 @@ def onion_peeling_method(n_cordas, y_i):
     r_interno = y_i[:]-dr/2
     
     # Tratamento dos valores de borda
-    r_externo[-1] = n_cordas*dr
+    r_externo[-1] = y_i[-1]+dr/2
     r_interno[0] = 0
     
     # Criando a matriz W_ij
